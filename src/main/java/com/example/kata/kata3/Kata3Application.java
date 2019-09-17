@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Kata3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Kata3Application.class, args);
+		//SpringApplication.run(Kata3Application.class, args);
+
+
+		System.out.println(7/2);
 	}
 
 }
