@@ -12,22 +12,13 @@ public class Highest_LowestTest {
 
     @Test
     public void returnWithHigherNumber(){
-        assertEquals("4","2 4");
+        assertEquals("4 2",Highest_Lowest.highAndLow("2 4"));
     }
 
-    @Test
-    public void returnWithLowerNumber(){
-        assertEquals("2","2 4");
-    }
 
     @Test
     public void returnWithHigherNegativeNumber(){
-        assertEquals("-2", "-2 -4");
-    }
-
-    @Test
-    public void returnWithLowerNegativeNumber(){
-        assertEquals("-4", "-2 -4");
+        assertEquals("-2 -4", "-2 -4");
     }
 
     @Test

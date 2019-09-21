@@ -4,25 +4,13 @@ public class Highest_Lowest {
 
     public static String highAndLow(String numbers) {
 
-        char[] haha = numbers.toCharArray();
+        int maxValue = Integer.MIN_VALUE;
+        int minValue = Integer.MAX_VALUE;
 
-        numbers.split(" ");
-
-
-        //for (char noToCompare : numbers.toCharArray()) Integer.compare(Integer.pnoToCompare)
-
-        for (int i = 0; i < numbers.toCharArray().length ; i++){
-
-            return Integer.compare(Integer.parseInt(numbers.valueOf(i),
-                    Integer.parseInt(numbers.valueOf(i+1)));
+        for(String toCompare : numbers.split(" ")) {
+            if (maxValue < Integer.parseInt(toCompare)) maxValue = Integer.parseInt(toCompare);
+            if (minValue > Integer.parseInt(toCompare)) minValue = Integer.parseInt(toCompare);
         }
-
-
-        Integer.parseInt(numbers.valueOf(0));
-
-        Integer.compare(haha[0], haha[1]);
-
-
-        return "throw towel";
+        return "" + maxValue + " " + minValue;
     }
 }
