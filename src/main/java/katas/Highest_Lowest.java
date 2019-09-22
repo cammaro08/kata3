@@ -7,10 +7,11 @@ public class Highest_Lowest {
         int maxValue = Integer.MIN_VALUE;
         int minValue = Integer.MAX_VALUE;
 
-        for(String toCompare : numbers.split(" ")) {
-            if (maxValue < Integer.parseInt(toCompare)) maxValue = Integer.parseInt(toCompare);
-            if (minValue > Integer.parseInt(toCompare)) minValue = Integer.parseInt(toCompare);
+        for (String c : numbers.split(" ")) {
+            int n = Integer.parseInt(c);
+            maxValue = maxValue < n ? n : maxValue;
+            minValue = minValue > n ? n : minValue;
         }
-        return "" + maxValue + " " + minValue;
+        return maxValue + " " + minValue;
     }
 }
