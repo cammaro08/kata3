@@ -8,8 +8,7 @@ public class Sum_mixed {
      */
     public int sum(List<?> mixed) {
         int sum = 0;
-
-       for(Object objectInList : mixed) sum += Integer.parseInt(objectInList.toString());
-       return sum;
+        for (Object c : mixed) sum += Integer.parseInt(c.toString());
+        return  sum;
     }
 }
