@@ -1,6 +1,5 @@
-package Black_Rock;
+package blackrock;
 
-import Black_Rock.BLK_Rock;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -49,8 +48,22 @@ public class BLK_RockTest {
     }
 
     @Test
-    public void return_50_ZeroFive_WhenPurchase() {
-        assertEquals("Fifty Pounds, Fifty Pence", BLK_Rock.calculateChange(50.5, 100));
+    public void return_50_ZeroFifty_WhenPurchase() {
+        assertEquals("Fifty Pounds, Fifty Pence", BLK_Rock.calculateChange(49.5, 100));
     }
 
+    @Test
+    public void return_50_ZeroFifty_ZeroTwenty_WhenPurchase() {
+        assertEquals("Fifty Pounds, Fifty Pence, Twenty Pence", BLK_Rock.calculateChange(49.3, 100));
+    }
+
+    @Test
+    public void return_ZeroTen_ZeroFive_WhenPurchase() {
+        assertEquals("Ten Pence, Five Pence", BLK_Rock.calculateChange(0.85, 1));
+    }
+
+    @Test
+    public void return_ZeroTen_ZeroTwo_WhenPurchase() {
+        assertEquals("Ten Pence, Two Pence", BLK_Rock.calculateChange(0.88, 1));
+    }
 }
