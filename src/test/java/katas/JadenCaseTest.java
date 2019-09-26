@@ -16,4 +16,14 @@ public class JadenCaseTest {
         assertEquals("Most Trees Are Blue", JadenCase.toJadenCase("most trees are blue"));
     }
 
+    @Test
+    public void testNullArg() {
+        assertNull(JadenCase.toJadenCase(null));
+    }
+
+    @Test
+    public void testEmptyArg() {
+        assertNull(JadenCase.toJadenCase(""));
+    }
+
 }

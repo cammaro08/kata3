@@ -3,6 +3,8 @@ package katas;
 public class JadenCase {
 
     public static String toJadenCase(String phrase) {
+        if(phrase == null || phrase.isEmpty() ) return null;
+
         StringBuilder bldr = new StringBuilder();
         String[] phraseSplit = phrase.split(" ");
         for (String s : phraseSplit) bldr.append(capitalAlpha(s)).append(" ");
