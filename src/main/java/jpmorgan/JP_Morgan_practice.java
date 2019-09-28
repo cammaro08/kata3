@@ -20,10 +20,7 @@ public class JP_Morgan_practice {
 
     protected static String checkIfHappyNumber(String input) {
         List<String> previousResult = new ArrayList<String>();
-
         String result = input;
-
-
 
         while (!previousResult.contains(result)) {
             previousResult.add(result);
