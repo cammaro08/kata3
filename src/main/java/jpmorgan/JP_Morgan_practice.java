@@ -14,7 +14,7 @@ public class JP_Morgan_practice {
         BufferedReader in = new BufferedReader(reader);
         String line;
         while ((line = in.readLine()) != null) {
-            System.out.println();
+            System.out.println(checkIfHappyNumber(line));
         }
     }
 
@@ -25,6 +25,7 @@ public class JP_Morgan_practice {
         while (!previousResult.contains(result)) {
             previousResult.add(result);
             result = returnSumOfSquares(result);
+
             if (result.equals("1") || result.equals("0")) break;
         }
         return result.equals("1") ? "1" : "0";
