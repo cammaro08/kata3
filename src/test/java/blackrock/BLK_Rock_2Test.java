@@ -19,7 +19,7 @@ public class BLK_Rock_2Test {
         letters.add('h');
         letters.add('i');
         letters.add('p');
-        assertEquals("p-i-h",BLK_Rock_2.reverseString(letters));
+        assertEquals("p-i-h",BLK_Rock_2.reverseString("hip"));
     }
 
     @Test
@@ -33,7 +33,13 @@ public class BLK_Rock_2Test {
         letters.add('h');
         letters.add('i');
         letters.add('p');
-        assertEquals("p-i-h-p-i-h",BLK_Rock_2.reverseString(letters));
+        assertEquals("p-i-h-p-i-h",BLK_Rock_2.reverseString("hip hip"));
+    }
+
+    @Test
+    public void andNowThis() {
+        assertEquals("s-i-h-t-w-o-n-d-n-a",BLK_Rock_2.reverseString("And now           this:"));
+
     }
 
 }

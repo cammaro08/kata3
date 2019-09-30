@@ -14,14 +14,15 @@ public class BLK_Rock_2 {
         BufferedReader in = new BufferedReader(reader);
         String line;
         while ((line = in.readLine()) != null) {
-            System.out.println();
+            System.out.println(reverseString(line));
         }
     }
 
-    protected static String reverseString(List<Character> letters){
+    protected static String reverseString(String letters){
         StringBuilder bldr = new StringBuilder();
-        for (int i = letters.size() - 1; i >= 0 ; i--){
-            bldr.append(letters.get(i));
+        List<Character> toAdd = returnCharArrayWithOnlyAlphabets(letters);
+        for (int i = toAdd.size() - 1; i >= 0 ; i--){
+            bldr.append(toAdd.get(i));
             bldr.append("-");
         }
         return bldr.toString().substring(0,bldr.lastIndexOf("-"));
@@ -30,13 +31,10 @@ public class BLK_Rock_2 {
 
     protected static List<Character> returnCharArrayWithOnlyAlphabets(String input){
         String alphabets = "abcdefghijklmnopqrstuvwxyz";
-        //String inputModified = input.toLowerCase().replaceAll(" ","");
-        char[] oldInput = input.toCharArray();
-        char[] alphabetsToInsert = alphabets.toCharArray();
         List<Character> stringToBeReversed = new ArrayList<Character>();
 
-        for(char s : oldInput){
-            for (char w : alphabetsToInsert){
+        for(char s : input.toLowerCase().toCharArray()){
+            for (char w : alphabets.toCharArray()){
                 if (s == w) stringToBeReversed.add(s);
             }
         }
