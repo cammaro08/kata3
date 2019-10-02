@@ -1,7 +1,5 @@
 package blackrock;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -9,7 +7,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class BLK_Rock_2Test {
+public class blk_Rock_2Test {
 
 
     @Test
@@ -19,7 +17,7 @@ public class BLK_Rock_2Test {
         letters.add('h');
         letters.add('i');
         letters.add('p');
-        assertEquals("p-i-h",BLK_Rock_2.reverseString("hip"));
+        assertEquals("p-i-h", blkRock2.reverseString("hip"));
     }
 
     @Test
@@ -33,12 +31,12 @@ public class BLK_Rock_2Test {
         letters.add('h');
         letters.add('i');
         letters.add('p');
-        assertEquals("p-i-h-p-i-h",BLK_Rock_2.reverseString("hip hip"));
+        assertEquals("p-i-h-p-i-h", blkRock2.reverseString("hip hip"));
     }
 
     @Test
     public void andNowThis() {
-        assertEquals("s-i-h-t-w-o-n-d-n-a",BLK_Rock_2.reverseString("And now           this:"));
+        assertEquals("s-i-h-t-w-o-n-d-n-a", blkRock2.reverseString("And now           this:"));
 
     }
 

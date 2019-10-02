@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BLK_Rock {
+public class blkRock {
 
 
     public static void main(String[] args) throws IOException {
@@ -15,7 +15,7 @@ public class BLK_Rock {
         try {
             double purchasePrice = Double.parseDouble(in.readLine());
             double cash = Double.parseDouble(in.readLine());
-            System.out.println(BLK_Rock.calculateChange(purchasePrice, cash));
+            System.out.println(blkRock.calculateChange(purchasePrice, cash));
         } catch (Exception e) {
             System.out.println(e);
         }
