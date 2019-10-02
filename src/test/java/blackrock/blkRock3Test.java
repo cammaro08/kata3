@@ -31,6 +31,14 @@ public class blkRock3Test {
     public void findTwoWordsInMultipleBlobs(){
         assertEquals("1|1",blkRock3.numberOfPatternMatched("aa","aab"));
         assertEquals("4|1|2|7",blkRock3.numberOfPatternMatched("aa","aabaaopopoaaklklkaap|aab|aaaoaa"));
+
+    }
+
+    @Test
+    public void findMultipleWordsInMultipleBlobs(){
+        assertEquals("0|0|0|0",blkRock3.numberOfPatternMatched("bcdejf","asdsd|asdab|bcdefaaaoaa"));
+        assertEquals("0|0|1|0|1",blkRock3.numberOfPatternMatched("bcde","asdsd|asdab|bcdpfabcdeoaa|bcdaews"));
+
     }
 
 

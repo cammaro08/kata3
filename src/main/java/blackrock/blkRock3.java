@@ -41,9 +41,11 @@ public class blkRock3 {
         int subStringStarting = 0;
         int subStringEnding = patternIncrement;
 
-        while(loop < blob.length()){
+        String cleanString = cleanBlob(pattern,blob);
+
+        while(loop < cleanString.length()){
             try{
-                String pieceOfBlob = blob.substring(subStringStarting, subStringEnding);
+                String pieceOfBlob = cleanString.substring(subStringStarting, subStringEnding);
                 totalMacthesInString += (pattern.equals(pieceOfBlob) ? 1 : 0);
             }
             catch (Exception e) { break;}
@@ -54,6 +56,15 @@ public class blkRock3 {
         return totalMacthesInString;
     }
 
+    private static String cleanBlob(String pattern, String blob){
+        StringBuilder bldr = new StringBuilder();
+        for(char c : blob.toCharArray()){
+           if (pattern.contains(Character.toString(c))){
+               bldr.append(Character.toString(c));
+           }
+        }
+        return bldr.toString();
+    }
 
 }
 
