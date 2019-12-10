@@ -1,4 +1,4 @@
-package jpmorgan;
+package m;
 
 import org.junit.Test;
 

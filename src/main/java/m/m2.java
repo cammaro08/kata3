@@ -1,4 +1,4 @@
-package jpmorgan;
+package m;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JP_Morgan_2 {
+public class m2 {
 
     public static void main(String[] args) throws IOException {
         InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);

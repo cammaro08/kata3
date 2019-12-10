@@ -1,10 +1,10 @@
-package blackrock;
+package rck;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class blkRock {
+public class rck {
 
 
     public static void main(String[] args) throws IOException {
@@ -15,7 +15,7 @@ public class blkRock {
         try {
             double purchasePrice = Double.parseDouble(in.readLine());
             double cash = Double.parseDouble(in.readLine());
-            System.out.println(blkRock.calculateChange(purchasePrice, cash));
+            System.out.println(rck.calculateChange(purchasePrice, cash));
         } catch (Exception e) {
             System.out.println(e);
         }
